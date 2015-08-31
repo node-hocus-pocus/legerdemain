@@ -104,7 +104,7 @@ var legerdemain = function( event, context ){
 		    		context.fail( err );
 		    	} else {
 		    		console.log( data );
-		    		context.succeed( data );
+		    		context.succeed( data : data );
 		    	}
 		    }
 		})
