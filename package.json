@@ -16,7 +16,6 @@
   "author": "John Titus",
   "license": "MIT",
   "dependencies": {
-    "node-mocks-http": "^1.4.3",
     "supertest": "^1.1.0"
   },
   "devDependencies": {

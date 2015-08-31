@@ -1,4 +1,3 @@
-var httpMocks = require('node-mocks-http');
 var supertest = require('supertest');
 /*
  * Split one of API Gateway's weird param strings into a real javascript object
