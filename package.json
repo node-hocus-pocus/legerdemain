@@ -1,0 +1,19 @@
+{
+  "name": "legerdemain",
+  "version": "0.1.0",
+  "description": "Run your Node.js web apps from AWS API Gateway",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha -R spec ./test/index.js"
+  },
+  "author": "John Titus",
+  "license": "MIT",
+  "dependencies": {
+    "node-mocks-http": "^1.4.3",
+    "supertest": "^1.1.0"
+  },
+  "devDependencies": {
+    "mocha": "^2.2.5",
+    "should": "^7.1.0"
+  }
+}
