@@ -103,7 +103,7 @@ var legerdemain = function( event, context ){
 		    		var err = new Error( statusCode );
 		    		context.fail( err );
 		    	} else {
-		    		context.log( data );
+		    		console.log( data );
 		    		context.succeed( data );
 		    	}
 		    }
