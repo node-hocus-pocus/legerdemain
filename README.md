@@ -2,7 +2,7 @@
 Run your Node.js Express app from Amazon's [AWS API Gateway](https://aws.amazon.com/api-gateway/).
 
 ## Status
-Legerdemain is very much a work in progress. Don't use it for production. Please do report problems & use cases in the Issues tab on Github.
+Legerdemain is very much a work in progress. Don't use it for production. Please do report problems & use cases in the (Issues)[https://github.com/johntitus/legerdemain/issues] tab on Github.
 
 ## Installation
 1) Install Legerdemain from NPM.
