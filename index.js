@@ -96,17 +96,22 @@ var legerdemain = function( event, context ){
 	supertest(this)
 		.get( data.url )
 		.end( function( err, response ){
-			var data = response.text,
-	    		statusCode = response.statusCode;
+			if ( err ){
+				console.log( err );
+				context.fail( err );
+			} else {
+				var data = response.text,
+		    		statusCode = response.statusCode;
 
-	    	consle.log('got response from app')
+		    	consle.log('got response from app')
 
-			if ( statusCode > 399 ){
-	    		var err = new Error( statusCode );
-	    		context.fail( err );
-	    	} else {
-	    		context.succeed( data );
-	    	}
+				if ( statusCode > 399 ){
+		    		var err = new Error( statusCode );
+		    		context.fail( err );
+		    	} else {
+		    		context.succeed( data );
+		    	}
+		    }
 		})
 	/*
 	
