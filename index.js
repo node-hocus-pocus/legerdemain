@@ -91,7 +91,7 @@ var legerdemain = function( event, context ){
 
 	var data = mapEvent( event );
 
-	//console.log( data );
+	console.log('in legerdemain handler')
 
 	supertest(this)
 		.get( data.url )
@@ -99,13 +99,13 @@ var legerdemain = function( event, context ){
 			var data = response.text,
 	    		statusCode = response.statusCode;
 
-	    	//console.log( response );
+	    	consle.log('got response from app')
 
 			if ( statusCode > 399 ){
 	    		var err = new Error( statusCode );
 	    		context.fail( err );
 	    	} else {
-	    		context.succeed( response );
+	    		context.succeed( data );
 	    	}
 		})
 	/*
