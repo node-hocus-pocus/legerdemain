@@ -90,6 +90,8 @@ var legerdemain = function( event, context ){
 	console.log('in legerdemain handler');
 	console.log('lg event');
 	console.log( event );
+	console.log( 'transformed into')
+	console.log( data );
 
 	supertest(this)
 		.get( data.url )
