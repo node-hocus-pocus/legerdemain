@@ -102,10 +102,13 @@ var legerdemain = function( event, context ){
 				console.log( err );
 				context.fail( err );
 			} else {
+				console.log('not an error!')
+				console.log('response was ')
+				console.log( response );
 				var data = response.text,
 		    		statusCode = response.statusCode;
 
-		    	consle.log('not an error!')
+		    	
 
 				if ( statusCode > 399 ){
 		    		var err = new Error( statusCode );
