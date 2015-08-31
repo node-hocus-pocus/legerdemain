@@ -80,10 +80,6 @@ function mapEvent( event ){
 	delete request.allParams;
 	delete request.queryString;
 
-	request.socket = {
-		remoteAddress : '127.0.0.1'
-	}
-
 	return request;
 }
 
@@ -91,7 +87,9 @@ var legerdemain = function( event, context ){
 
 	var data = mapEvent( event );
 
-	console.log('in legerdemain handler')
+	console.log('in legerdemain handler');
+	console.log('lg event');
+	console.log( event );
 
 	supertest(this)
 		.get( data.url )
