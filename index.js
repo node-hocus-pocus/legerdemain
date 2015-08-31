@@ -95,47 +95,16 @@ var legerdemain = function( event, context ){
 				context.fail( err );
 			} else {
 				var data = response.text,
-		    		statusCode = response.statusCode;
-
-		    	
+		    		statusCode = response.statusCode;		    	
 
 				if ( statusCode > 399 ){
 		    		var err = new Error( statusCode );
 		    		context.fail( err );
 		    	} else {
-		    		console.log( data );
 		    		context.succeed({data : data});
 		    	}
 		    }
-		})
-	/*
-	
-	var request = httpMocks.createRequest({
-        method: data.method,
-        url: data.url,
-	    query : data.query,
-	    headers : data.headers
-    });
-
-    var response = httpMocks.createResponse({
-		eventEmitter: require('events').EventEmitter
-	});
-   
-    response.on( 'end', function(){
-    	var data = response._getData(),
-    		statusCode = response.statusCode;
-
-		if ( statusCode > 399 ){
-    		var err = new Error( statusCode );
-    		context.fail( err );
-    	} else {
-    		console.log('should be 200')
-    		context.succeed( {statusCode : statusCode, data : data });
-    	}
-    });
-
-    this.handle( request, response );
-    */
+		});
 }
 
 module.exports = legerdemain;

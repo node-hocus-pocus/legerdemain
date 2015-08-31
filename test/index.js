@@ -22,7 +22,7 @@ describe('Legerdemain', function() {
 			var event = require('./events/get_posts.json');
 			var context = {
 				succeed: function(data) {
-					console.log(data);
+					//console.log(data);
 					done();
 				},
 				fail: done,
