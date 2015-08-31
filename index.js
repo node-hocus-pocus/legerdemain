@@ -96,14 +96,16 @@ var legerdemain = function( event, context ){
 	supertest(this)
 		.get( data.url )
 		.end( function( err, response ){
+			console.log('got response from app')
 			if ( err ){
+				console.log("response was an error")
 				console.log( err );
 				context.fail( err );
 			} else {
 				var data = response.text,
 		    		statusCode = response.statusCode;
 
-		    	consle.log('got response from app')
+		    	consle.log('not an error!')
 
 				if ( statusCode > 399 ){
 		    		var err = new Error( statusCode );
