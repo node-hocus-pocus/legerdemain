@@ -85,26 +85,15 @@ function mapEvent( event ){
 
 var legerdemain = function( event, context ){
 
-	var data = mapEvent( event );
-
-	console.log('in legerdemain handler');
-	console.log('lg event');
-	console.log( event );
-	console.log( 'transformed into')
-	console.log( data );
+	var data = mapEvent( event );	
 
 	supertest(this)
 		.get( data.url )
 		.end( function( err, response ){
-			console.log('got response from app')
 			if ( err ){
-				console.log("response was an error")
 				console.log( err );
 				context.fail( err );
 			} else {
-				console.log('not an error!')
-				console.log('response was ')
-				console.log( response );
 				var data = response.text,
 		    		statusCode = response.statusCode;
 
@@ -114,6 +103,7 @@ var legerdemain = function( event, context ){
 		    		var err = new Error( statusCode );
 		    		context.fail( err );
 		    	} else {
+		    		context.log( data );
 		    		context.succeed( data );
 		    	}
 		    }
