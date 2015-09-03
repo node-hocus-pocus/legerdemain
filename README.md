@@ -18,11 +18,11 @@ Hocus Pocus is going to handle the following -
 npm install legerdemain --save
 ```
 2) Require ledgerdemain in your app definition file (usually app.js)
-```
+```js
 var legerdemain = require('legerdemain');
 ```
 3) In the same file, add an **exports.handler**. Make sure you **do not** have a module.exports of your app.
-```
+```js
 //module.exports = app;
 exports.handler = legerdemain.bind(app);
 ```
@@ -42,7 +42,7 @@ exports.handler = legerdemain.bind(app);
 3) For each Method in the Gateway:
 
 For the **Integration Request**, create a **Mapping Template** with *Content-type* of *application/json*. The actual template should look like this:
-```
+```json
 {
     "stage": "$context.stage",
     "request-id": "$context.requestId",
