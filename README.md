@@ -4,6 +4,14 @@ Run your Node.js Express app from Amazon's [AWS API Gateway](https://aws.amazon.
 ## Status
 Legerdemain is very much a work in progress. Don't use it for production. Please do report problems & use cases in the (Issues)[https://github.com/johntitus/legerdemain/issues] tab on Github.
 
+Legerdemain will become part of [Hocus Pocus](https://github.com/node-hocus-pocus) as soon as I get some time. 
+
+Hocus Pocus is going to handle the following -
+
+`pocus` - a node module to handle the api gateway installation portion, so you don't have to click a million buttons in the gateway console.
+
+`hocus` - A CLI runner for pocus.  So you can do `hocus deploy` and voila, everything gets setup in API Gateway.
+
 ## Installation
 1) Install Legerdemain from NPM.
 ```
