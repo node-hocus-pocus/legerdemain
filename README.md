@@ -76,3 +76,6 @@ $inputRoot.data
 4) Deploy your API.
 
 AWS API Gateway will give you the base URL to your app. Open that base url, plus your route, in your browser. For instance, if you have a "/" route, you can just open the base URL that AWS API Gatway provided.
+
+## License
+MIT
