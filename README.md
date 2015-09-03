@@ -2,9 +2,9 @@
 Run your Node.js Express app from Amazon's [AWS API Gateway](https://aws.amazon.com/api-gateway/).
 
 ## Status
-Legerdemain is very much a work in progress. Don't use it for production. Please do report problems & use cases in the (Issues)[https://github.com/johntitus/legerdemain/issues] tab on Github.
+Legerdemain is very much a work in progress. Don't use it for production. Please do report problems & use cases in the [Issues](https://github.com/johntitus/legerdemain/issues) tab on Github.
 
-Legerdemain will become part of [Hocus Pocus](https://github.com/node-hocus-pocus) as soon as I get some time. 
+Legerdemain will become part of [Hocus Pocus](https://github.com/node-hocus-pocus) as soon as I get some time.
 
 Hocus Pocus is going to handle the following -
 
@@ -63,13 +63,13 @@ For the **Integration Request**, create a **Mapping Template** with *Content-typ
     "allParams": "$input.params()"
 }
 ```
-If the method is meant to return HTML, 
+If the method is meant to return HTML,
 
-3a) Create a **Method Response** with *Content-type* of *text/html* and use the **Empty Model**.  
+3a) Create a **Method Response** with *Content-type* of *text/html* and use the **Empty Model**.
 
 3b) Create an **Integration Response** with a **Mapping Template**, *Content-type* of *text/html*, with the following actual template:
 ```
-#set($inputRoot = $input.path('$')) 
+#set($inputRoot = $input.path('$'))
 $inputRoot.data
 ```
 
