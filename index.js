@@ -82,7 +82,17 @@ function mapEvent( event ){
 	return request;
 }
 
-var legerdemain = function( event, context ){
+function returnToLambda( context, callback, err, data ) {
+	if ( callback !== undefined ) {
+		callback( err, data );
+	} else if ( err ) {
+		context.fail( err );
+	} else {
+		context.succeed( data );
+	}
+}
+
+var legerdemain = function( event, context, callback ){
 
 	var data = mapEvent( event );	
 
@@ -91,18 +101,18 @@ var legerdemain = function( event, context ){
 		.end( function( err, response ){
 			if ( err ){
 				console.log( err );
-				context.fail( err );
+				returnToLambda( context, callback, err, null );
 			} else {
 				var data = response.text,
-		    		statusCode = response.statusCode;		    	
+				    statusCode = response.statusCode;
 
 				if ( statusCode > 399 ){
-		    		var err = new Error( statusCode );
-		    		context.fail( err );
-		    	} else {
-		    		context.succeed({data : data});
-		    	}
-		    }
+					var err = new Error( statusCode );
+					returnToLambda( context, callback, err, null );
+				} else {
+					returnToLambda( context, callback, null, {data: data} );
+				}
+			}
 		});
 }
 
