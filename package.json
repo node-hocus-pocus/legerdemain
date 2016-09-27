@@ -1,17 +1,17 @@
 {
   "name": "legerdemain",
-  "version": "0.1.0",
-  "description": "Run your Node.js web apps from AWS API Gateway",
+  "version": "0.1.1",
+  "description": "Let's your express app understand the AWS API Gateway event/context functions.",
   "main": "index.js",
   "scripts": {
     "test": "mocha -R spec ./test/index.js"
   },
   "repository" : { 
     "type" : "git", 
-    "url" : "https://github.com/johntitus/legerdemain.git"
+    "url" : "https://github.com/node-hocus-pocus/legerdemain.git"
   },
   "bugs" : {
-    "url" : "https://github.com/johntitus/legerdemain/issues"
+    "url" : "https://github.com/node-hocus-pocus/legerdemain/issues"
   },
   "author": "John Titus",
   "license": "MIT",
